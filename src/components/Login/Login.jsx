@@ -1,5 +1,5 @@
 import "./login.css";
-import loginBg from "../images/login-page.png";
+import loginBg from "@/images/login-page.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";

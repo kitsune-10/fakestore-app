@@ -1,6 +1,6 @@
-import collection1 from "./images/hat.png"
-import collection2 from "./images/headphones.png"
-import collection3 from "./images/shoes.png"
+import collection1 from "@/images/hat.png"
+import collection2 from "@/images/headphones.png"
+import collection3 from "@/images/shoes.png"
 
 export default [
   {

@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import "./footer.css";
 
+import fbLogo from "@/images/fb-logo.png"
+import igLogo from "@/images/ig-logo.png"
+import twitterLogo from "@/images/twitter-logo.png"
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -32,9 +36,9 @@ export default function Footer() {
         <div className="footer-column">
           <h4 className="footer-heading">Follow Us</h4>
           <div className="footer-socials">
-            <a href="#"><img src="../../images/fb-logo.png" alt="Facebook" /></a>
-            <a href="#"><img src="../../images/ig-logo.png" alt="Instagram" /></a>
-            <a href="#"><img src="../../images/twitter-logo.png" alt="Twitter" /></a>
+            <a href="#"><img src={fbLogo} /></a>
+            <a href="#"><img src={igLogo} /></a>
+            <a href="#"><img src={twitterLogo} alt="Twitter" /></a>
           </div>
         </div>
       </div>

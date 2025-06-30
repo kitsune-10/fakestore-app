@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useCart } from "./CartContext";
-import ConfirmModal from "./ConfirmModal";
+import ConfirmModal from "@/components/ConfirmModal";
 import "./cartpage.css";
 
-import trashIcon from "../images/delete-cart-icon.jpg";
+import trashIcon from "@/images/delete-cart-icon.jpg";
 
 function CartPage() {
   const { cartItems, removeFromCart, updateQuantity } = useCart();

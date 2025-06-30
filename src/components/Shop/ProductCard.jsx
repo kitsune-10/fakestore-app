@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useCart } from "../CartContext";
+import { useCart } from "../Cart/CartContext";
 import { toast } from "react-toastify";
-import bagIcon from "../../images/bag-icon.png";
+import bagIcon from "@/images/bag-icon.png";
 import "./shop.css";
 
 export default function ProductCard({ product }) {

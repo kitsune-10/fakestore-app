@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import logOutIcon from "../images/logout-icon.png";
-import brandLogo from "../images/hs-logo.png"
-import bagIcon from "../images/bag-icon.png";
+import logOutIcon from "@/images/logout-icon.png";
+import brandLogo from "@/images/hs-logo.png"
+import bagIcon from "@/images/bag-icon.png";
 
 function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/homepage">
+        <Link to="/homepage" className="logo">
           <img src={brandLogo} alt="fakeStore Logo" className="logo-img" />
+          <span><strong>hot</strong><em>&</em>Sale</span>
         </Link>
-        <span><strong>hot</strong><em>&</em>Sale</span>
         
       </div>
 

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Header from "./Header"
-import Hero from "./Hero"
-import ProductCard from "./Shop/ProductCard";
+import Header from "@/components/Header"
+import Hero from "@/components/Hero"
+import ProductCard from "@/components/Shop/ProductCard";
 
 import "./marketplace.css";
-import bannerImg from "../images/banner-market.png";
+import bannerImg from "@/images/banner-market.png";
 
 function Marketplace() {
   const [products, setProducts] = useState([]);

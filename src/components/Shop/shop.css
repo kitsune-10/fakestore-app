@@ -161,7 +161,7 @@ h2 {
 
 /* Drawer itself */
 .drawer {
-  
+  height: 100vh;
   position: fixed;
   top: 0;
   right: -100%;
@@ -206,7 +206,9 @@ h2 {
 .drawer-details {
   flex: 1;
   overflow-y: auto;
-  margin-bottom: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* Product title */
@@ -246,7 +248,8 @@ h2 {
 
 /* Description */
 .drawer-description {
-  max-height: 25vh; 
+  max-height: 25vh;
+  min-height: 5rem; /* shows short content nicely */
   overflow-y: auto;
   padding-right: 4px;
   font-size: 0.9rem;
@@ -254,7 +257,7 @@ h2 {
 }
 
 .drawer-cart {
- flex-shrink: 0;
+  flex-shrink: 0;
   background-color: #47231A;
   color: white;
   border: none;

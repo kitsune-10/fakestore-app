@@ -79,20 +79,21 @@ export default function ProductCard({ product }) {
             <p className="drawer-category">{product.category}</p>
             <h2>{product.title}</h2>
             <p className="drawer-stock">Stock: {product.rating.count}</p>
-            <p className="drawer-description">{product.description}</p>
+
+            <div className="drawer-description">{product.description}</div>
 
             <div className="drawer-price-section">
               <span className="original-price">₱{product.price}</span>
               <span className="sale-price large">₱{product.price}</span>
             </div>
-
-            <button
-              className="add-to-cart-btn drawer-cart"
-              onClick={handleAddToCart}
-            >
-              Add to Cart
-            </button>
           </div>
+
+          <button
+            className="add-to-cart-btn drawer-cart"
+            onClick={handleAddToCart}
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </>

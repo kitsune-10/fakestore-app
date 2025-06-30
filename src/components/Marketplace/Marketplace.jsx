@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ENDPOINTS } from "@/varConstant";
 import Header from "@/components/Header"
 import Hero from "@/components/Hero"
 import ProductCard from "@/components/Shop/ProductCard";
@@ -27,8 +28,8 @@ function Marketplace() {
         const category = categoryMap[selectedCategory];
         const url =
           category === "all"
-            ? "https://fakestoreapi.com/products"
-            : `https://fakestoreapi.com/products/category/${encodeURIComponent(category)}`;
+            ? ENDPOINTS.PRODUCTS
+            : `${ENDPOINTS.CATEGORY}/${encodeURIComponent(category)}`;
         const response = await fetch(url);
         const data = await response.json();
         setProducts(data);

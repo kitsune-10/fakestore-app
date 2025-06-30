@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import { ENDPOINTS } from "@/varConstant";
+
 export default function Login() {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [error, setError] = useState("");
@@ -21,20 +23,23 @@ export default function Login() {
     e.preventDefault();
     setError("");
 
-    try {
-      const res = await axios.post("https://fakestoreapi.com/auth/login", {
-        username: formData.username,
-        password: formData.password,
-      });
+    const endpoint = ENDPOINTS.LOGIN;
+    const parameter = {
+      username: formData.username,
+      password: formData.password,
+    };
 
-      if (res.data.token) {
-        localStorage.setItem("token", res.data.token);
+    try {
+      const response = await axios.post(endpoint, parameter);
+
+      if (response.data.token) {
+        localStorage.setItem("token", response.data.token);
         navigate("/homepage");
       }
     } catch (err) {
       setError("Invalid username or password.");
     }
-  };
+};
 
   return (
     <main className="login-page">
